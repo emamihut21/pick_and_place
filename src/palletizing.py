@@ -13,7 +13,6 @@ from math import sin, cos, pi, radians
 from std_msgs.msg import String
 from moveit_commander.conversions import pose_to_list
 import numpy as np    
-#import scipy
 from tf.transformations import quaternion_from_euler, euler_matrix, quaternion_slerp, quaternion_from_matrix 
 
 
@@ -48,9 +47,6 @@ class MoveGroupPythonPalletizing(object):
     group_name = "manipulator"
     move_group = moveit_commander.MoveGroupCommander(group_name)
 
-    #planning_frame = move_group.get_planning_frame()
-    #print("============ Planning frame: %s" % planning_frame)
-
     eef_link = move_group.get_end_effector_link()
     print("============ End effector link: %s" % eef_link)
 
@@ -65,7 +61,6 @@ class MoveGroupPythonPalletizing(object):
     self.robot = robot
     self.scene = scene
     self.move_group = move_group
-    #self.planning_frame = planning_frame
     self.eef_link = eef_link
     self.group_names = group_names
 
