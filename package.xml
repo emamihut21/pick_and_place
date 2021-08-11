@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>pick_and_place</name>
+  <version>0.0.0</version>
+  <description>The pick_and_place package</description>
+
+ 
+  <maintainer email="emamihut8@gmail.com">osboxes</maintainer>
+
+  <license>TODO</license>
+  
+  <author email="emamihut8@gmail.com">Ema Mihut</author>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <exec_depend>rospy</exec_depend>
+
+  <!--packages needed at compile time-->
+  <build_depend>moveit_core</build_depend>                     <!--representation of kinematics, collision detection, kinematic solver plugin-->
+  <build_depend>moveit_ros_planning</build_depend>
+  <build_depend>moveit_ros_planning_interface</build_depend>
+  <build_depend>geometric_shapes</build_depend>                <!--works with geometric shapes(box)-->
+  <build_depend>tf2_geometry_msgs</build_depend>               <!--converting geometry_msgs data types-->
+
+  <!--packages needed at runtime-->
+  <exec_depend>moveit_core</exec_depend>
+  <exec_depend>moveit_commander</exec_depend>
+  <exec_depend>moveit_ros_planning_interface</exec_depend>
+  <exec_depend>tf2_geometry_msgs</exec_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

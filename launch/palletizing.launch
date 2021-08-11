@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="palletizing" pkg="pick_and_place" type="palletizing.py" respawn="false" output="screen">
+  </node>
+
+</launch>
